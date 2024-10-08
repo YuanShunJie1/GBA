@@ -341,14 +341,12 @@ def gradcam_visualize(model):
     from pytorch_grad_cam import GradCAM
     from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
     from pytorch_grad_cam.utils.image import show_cam_on_image
-    
 
-    #MEAN_IMAGENET = (0.4914, 0.4822, 0.4465)
-    #STD_IMAGENET  = (0.2023, 0.1994, 0.2010)
-    
-    MEAN_CIFAR = (0.3337, 0.3064, 0.3171)
-    STD_CIFAR  = (0.2672, 0.2564, 0.2629)
-    
+    MEAN_CIFAR = (0.4914, 0.4822, 0.4465)
+    STD_CIFAR  = (0.2023, 0.1994, 0.2010)  
+
+    mean = torch.tensor(MEAN_CIFAR)
+    std = torch.tensor(STD_CIFAR)
     mean = torch.tensor(MEAN_CIFAR)
     std = torch.tensor(STD_CIFAR)
 
