@@ -347,8 +347,6 @@ def gradcam_visualize(model):
 
     mean = torch.tensor(MEAN_CIFAR)
     std = torch.tensor(STD_CIFAR)
-    mean = torch.tensor(MEAN_CIFAR)
-    std = torch.tensor(STD_CIFAR)
 
     def denormalize(tensor, mean, std):
         mean = mean[:, None, None]
